@@ -42,6 +42,13 @@ namespace Lambda
             {
                 Console.WriteLine("Yess, Person having same name exist.");
             }
+
+            //UC6
+            Console.WriteLine("Skipping every person whose age is less than 60 year");
+            foreach (Person person1 in list.SkipWhile(e => e.Age < 60))
+            {
+                Console.WriteLine("Name :" + person1.Name + "Age:" + person1.Age);
+            }
         }
     }
 }
