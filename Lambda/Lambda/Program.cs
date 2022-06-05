@@ -23,6 +23,13 @@ namespace Lambda
             {
                 Console.WriteLine("Name: " + person.Name + ".....Age: " + person.Age);
             }
+
+            //UC2
+            Console.WriteLine("Checking teenager or not.");
+            foreach (Person person in list.FindAll(e => (e.Age >= 13 && e.Age <= 18)))
+            {
+                Console.WriteLine("Name: " + person.Name + ".....Age: " + person.Age);
+            }
         }
     }
 }
