@@ -35,6 +35,13 @@ namespace Lambda
             Console.WriteLine("Getting average of all the person age.");
             double avrage = list.Average(e => e.Age);
             Console.WriteLine("The avearge of all the person age is :" + avrage);
+
+            //UC5
+            Console.WriteLine("Checking wether a person having same name 'Shashank' exist or not.");
+            if (list.Exists(e => e.Name == "Shashank"))
+            {
+                Console.WriteLine("Yess, Person having same name exist.");
+            }
         }
     }
 }
