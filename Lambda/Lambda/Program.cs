@@ -17,19 +17,24 @@ namespace Lambda
             list.Add(new Person("745896147", "Suraj", "715 Ohio route 66", 85));
             list.Add(new Person("789683214", "Omkar", "123 Miami beach", 59));
 
-            //UC1
+            //UC2
             Console.WriteLine("retrieve data");
             foreach (Person person in list.FindAll(e => (e.Age >= 60)).Take(2).ToList())
             {
                 Console.WriteLine("Name: " + person.Name + ".....Age: " + person.Age);
             }
 
-            //UC2
+            //UC3
             Console.WriteLine("Checking teenager or not.");
             foreach (Person person in list.FindAll(e => (e.Age >= 13 && e.Age <= 18)))
             {
                 Console.WriteLine("Name: " + person.Name + ".....Age: " + person.Age);
             }
+
+            //UC4
+            Console.WriteLine("Getting average of all the person age.");
+            double avrage = list.Average(e => e.Age);
+            Console.WriteLine("The avearge of all the person age is :" + avrage);
         }
     }
 }
