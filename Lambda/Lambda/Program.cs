@@ -17,6 +17,12 @@ namespace Lambda
             list.Add(new Person("745896147", "Suraj", "715 Ohio route 66", 85));
             list.Add(new Person("789683214", "Omkar", "123 Miami beach", 59));
 
+            //UC1
+            Console.WriteLine("retrieve data");
+            foreach (Person person in list.FindAll(e => (e.Age >= 60)).Take(2).ToList())
+            {
+                Console.WriteLine("Name: " + person.Name + ".....Age: " + person.Age);
+            }
         }
     }
 }

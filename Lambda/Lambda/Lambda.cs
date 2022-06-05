@@ -9,15 +9,16 @@ namespace Lambda
     public class Person
     {
         public string SSN;
-        public string name;
-        public string address;
-        public int age;
+        public string Name;
+        public string Address;
+        public int Age;
+
         public Person(string ssn, string name, string address, int age)
         {
-            this.SSN = ssn;
-            this.name = name;
-            this.address = address;
-            this.age = age;
+            SSN = ssn;
+            Name = name;
+            Address = address;
+            Age = age;
         }
     }
 }
